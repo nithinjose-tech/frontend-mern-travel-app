@@ -58,7 +58,7 @@ function App() {
     };
 
     try {
-      const res = await axios.post("/pins", newPin);
+      const res = await axios.post("https://backend-mern-travel-app.herokuapp.com/api/pins", newPin);
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (err) {
